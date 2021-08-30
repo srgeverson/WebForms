@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisContatos", "SisContatos\SisContatos.csproj", "{EEC42298-285F-425F-88B1-6B932B003ADD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisContatos", "SisContatos\SisContatos.csproj", "{8C7338C2-72E1-4B2E-BA7D-B34FAEE8A67E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EEC42298-285F-425F-88B1-6B932B003ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEC42298-285F-425F-88B1-6B932B003ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEC42298-285F-425F-88B1-6B932B003ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEC42298-285F-425F-88B1-6B932B003ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C7338C2-72E1-4B2E-BA7D-B34FAEE8A67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7338C2-72E1-4B2E-BA7D-B34FAEE8A67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7338C2-72E1-4B2E-BA7D-B34FAEE8A67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7338C2-72E1-4B2E-BA7D-B34FAEE8A67E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B4FDB451-A7DD-464B-9FFD-1E9B48D2365F}
+		SolutionGuid = {24E3AD14-561A-4A4F-B0D9-69ED09375156}
 	EndGlobalSection
 EndGlobal
