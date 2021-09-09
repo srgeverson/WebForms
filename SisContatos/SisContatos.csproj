@@ -70,6 +70,7 @@
     <Content Include="assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="pages\frmCadastrarContato.aspx" />
+    <Content Include="pages\frmListarContatos.aspx" />
     <Content Include="Web.config" />
     <Content Include="frmIndex.aspx" />
   </ItemGroup>
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="pages\frmCadastrarContato.aspx.designer.cs">
       <DependentUpon>frmCadastrarContato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\frmListarContatos.aspx.cs">
+      <DependentUpon>frmListarContatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\frmListarContatos.aspx.designer.cs">
+      <DependentUpon>frmListarContatos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmIndex.aspx.cs">
