@@ -56,3 +56,4 @@ C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.CoreCompileInpu
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.CopyComplete
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.dll
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.pdb
+C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.AssemblyReference.cache

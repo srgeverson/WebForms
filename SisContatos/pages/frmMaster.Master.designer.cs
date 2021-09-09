@@ -24,24 +24,6 @@ namespace SisContatos.pages
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-        /// Controle btnCadastrarContato.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastrarContato;
-
-        /// <summary>
-        /// Controle btnListarContatos.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnListarContatos;
-
-        /// <summary>
         /// Controle contentPlaceHolderFrmMaster.
         /// </summary>
         /// <remarks>

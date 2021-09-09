@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmCadastrarContato.aspx.cs" Inherits="SisContatos.pages.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmCadastrarContatos.aspx.cs" Inherits="SisContatos.pages.WebForm1" %>
 
 <asp:Content ID="contentFrmCadastrarContatoHead" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
