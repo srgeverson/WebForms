@@ -12,10 +12,11 @@
     <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+    <form id="form1" runat="server">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-               <!-- Aqui ficará o conteúdo do topo -->
+                <!-- Aqui ficará o conteúdo do topo -->
             </div>
         </div>
 
@@ -23,10 +24,11 @@
             <div class="col-2">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="pages/frmCadastrarContato.aspx">Cadastrar</a>
+                        <asp:Button class="nav-link active" ID="btnCadastrarContato" OnClick="btnCadastrarContatos_Click" runat="server" Text="Cadastrar Contatos" />
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/frmListarContatos.aspx">Listar</a>
+                        <asp:Button class="nav-link" ID="btnListarContatos" OnClick="btnListarContatos_Click" runat="server" Text="Listar Contatos" />
+                        <asp:Button ID="Button1" runat="server" Text="Button" />
                     </li>
                 </ul>
             </div>
@@ -43,5 +45,6 @@
     </div>
     <!-- Incluindo o JavaScript do Bootstrap 5-->
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    </form>
 </body>
 </html>

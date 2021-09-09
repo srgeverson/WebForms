@@ -13,5 +13,15 @@ namespace SisContatos.pages
         {
 
         }
+
+        protected void btnCadastrarContatos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/pages/frmCadastrarContatos.aspx");
+        }
+
+        protected void btnListarContatos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/pages/frmListarContatos.aspx");
+        }
     }
 }
