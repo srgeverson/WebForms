@@ -11,7 +11,7 @@ namespace SisContatos
 {
 
 
-    public partial class frmIndex1
+    public partial class WebForm1
     {
     }
 }
