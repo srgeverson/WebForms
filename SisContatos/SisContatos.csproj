@@ -71,7 +71,6 @@
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="frmIndex.aspx" />
     <Content Include="Web.config" />
-    <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contato.cs" />
@@ -82,19 +81,20 @@
     <Compile Include="frmIndex.aspx.designer.cs">
       <DependentUpon>frmIndex.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="pages\frmMaster.Master.cs">
+      <DependentUpon>frmMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="pages\frmMaster.Master.designer.cs">
+      <DependentUpon>frmMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\bootstrap\css\bootstrap.css.map" />
     <Content Include="assets\bootstrap\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
+    <Content Include="pages\frmMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
