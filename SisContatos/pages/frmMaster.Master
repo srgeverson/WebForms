@@ -4,17 +4,44 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>SisContatos</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <!--CSS Bootstrap 5-->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+               <!-- Aqui ficará o conteúdo do topo -->
+            </div>
         </div>
-    </form>
+
+        <div class="row">
+            <div class="col-2">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="pages/frmCadastrarContato.aspx">Cadastrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/frmCadastrarContato.aspx">Listar</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <asp:ContentPlaceHolder ID="contentPlaceHolderFrmMaster" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- Aqui ficará o conteúdo do rodapé -->
+            </div>
+        </div>
+    </div>
+    <!-- Incluindo o JavaScript do Bootstrap 5-->
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
