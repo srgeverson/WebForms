@@ -28,7 +28,6 @@
                     </li>
                     <li class="nav-item">
                         <asp:Button class="nav-link" ID="btnListarContatos" OnClick="btnListarContatos_Click" runat="server" Text="Listar Contatos" />
-                        <asp:Button ID="Button1" runat="server" Text="Button" />
                     </li>
                 </ul>
             </div>

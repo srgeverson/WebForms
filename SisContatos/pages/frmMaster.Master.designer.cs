@@ -51,15 +51,6 @@ namespace SisContatos.pages
         protected global::System.Web.UI.WebControls.Button btnListarContatos;
 
         /// <summary>
-        /// Controle Button1.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
         /// Controle contentPlaceHolderFrmMaster.
         /// </summary>
         /// <remarks>

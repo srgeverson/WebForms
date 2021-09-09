@@ -69,26 +69,26 @@
   <ItemGroup>
     <Content Include="assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
-    <Content Include="pages\frmCadastrarContato.aspx" />
+    <Content Include="pages\frmCadastrarContatos.aspx" />
     <Content Include="pages\frmListarContatos.aspx" />
     <Content Include="Web.config" />
     <Content Include="frmIndex.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contato.cs" />
+    <Compile Include="pages\frmCadastrarContatos.aspx.cs">
+      <DependentUpon>frmCadastrarContatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\frmCadastrarContatos.aspx.designer.cs">
+      <DependentUpon>frmCadastrarContatos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\frmMaster.Master.cs">
       <DependentUpon>frmMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\frmMaster.Master.designer.cs">
       <DependentUpon>frmMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="pages\frmCadastrarContato.aspx.cs">
-      <DependentUpon>frmCadastrarContato.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\frmCadastrarContato.aspx.designer.cs">
-      <DependentUpon>frmCadastrarContato.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\frmListarContatos.aspx.cs">
       <DependentUpon>frmListarContatos.aspx</DependentUpon>

@@ -52,7 +52,6 @@ C:\Projetos\SisContatos\SisContatos\bin\roslyn\VBCSCompiler.exe
 C:\Projetos\SisContatos\SisContatos\bin\roslyn\VBCSCompiler.exe.config
 C:\Projetos\SisContatos\SisContatos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Projetos\SisContatos\SisContatos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.AssemblyReference.cache
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.CoreCompileInputs.cache
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.CopyComplete
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.dll
