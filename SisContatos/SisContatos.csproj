@@ -94,7 +94,7 @@
     <Compile Include="domain\exception\InserirException.cs" />
     <Compile Include="domain\exception\ConexaoException.cs" />
     <Compile Include="domain\model\Contato.cs" />
-    <Compile Include="domain\service\ContatoService.cs" />
+    <Compile Include="domain\service\IContatoService.cs" />
     <Compile Include="domain\sql\ContatoSQL.cs" />
     <Compile Include="pages\frmCadastrarContatos.aspx.cs">
       <DependentUpon>frmCadastrarContatos.aspx</DependentUpon>
