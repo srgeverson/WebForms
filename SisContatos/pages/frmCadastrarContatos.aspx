@@ -7,11 +7,11 @@
         <div class="row">
             <div class="col-md-6">
                 <asp:Label ID="lblNome" for="txtNome" class="form-label" runat="server">Nome</asp:Label>
-                <asp:TextBox type="text" class="form-control" ID="txtNome" runat="server" />
+                <asp:TextBox type="text" class="form-control" ID="txtNome" placeholder="Seu nome" runat="server" />
             </div>
             <div class="col-md-6">
                 <asp:Label ID="lblSobrenome" for="txtSobrenome" class="form-label" runat="server">Sobre Nome</asp:Label>
-                <asp:TextBox type="text" class="form-control" ID="txtSobrenome" runat="server" />
+                <asp:TextBox type="text" class="form-control" ID="txtSobrenome" placeholder="Seu sobre nome" runat="server" />
             </div>
         </div>
         <div class="col-12">

@@ -95,7 +95,6 @@ C:\Projetos\SisContatos\SisContatos\bin\tr\Microsoft.Build.resources.dll
 C:\Projetos\SisContatos\SisContatos\bin\zh-Hans\Microsoft.Build.resources.dll
 C:\Projetos\SisContatos\SisContatos\bin\zh-Hant\Microsoft.Build.resources.dll
 C:\Projetos\SisContatos\SisContatos\bin\pt-BR\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
-C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.AssemblyReference.cache
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.CoreCompileInputs.cache
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.csproj.CopyComplete
 C:\Projetos\SisContatos\SisContatos\obj\Debug\SisContatos.dll
