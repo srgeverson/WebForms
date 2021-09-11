@@ -42,10 +42,10 @@ namespace SisContatos.domain.dao
                 sql += "FROM ";
                 sql += "contatos c ";
                 sql += "WHERE ";
-                sql += "c.nome LIKE %@nome% AND ";
-                sql += "c.sobre_nome LIKE %@sobre_nome% AND ";
-                sql += "c.email LIKE %@email% AND ";
-                sql += "c.telefone LIKE %@telefone%";
+                sql += "c.nome LIKE '%@nome%' AND ";
+                sql += "c.sobre_nome LIKE '%@sobre_nome%' AND ";
+                sql += "c.email LIKE '%@email%' AND ";
+                sql += "c.telefone LIKE '%@telefone%'";
                 List<SqlParameter> parameters = new List<SqlParameter>();
                 parameters.Add(new SqlParameter("@nome", contato.Nome));
                 parameters.Add(new SqlParameter("@sobre_nome", contato.SobreNome));

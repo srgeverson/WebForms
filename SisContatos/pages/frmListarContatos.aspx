@@ -3,28 +3,35 @@
 <asp:Content ID="contentFrmListarContatosHead" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="contentFrmListarContatos" ContentPlaceHolderID="contentPlaceHolderFrmMaster" runat="server">
-    <div class="row">
-        <form id="formListarContato" runat="server">
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
+    <form id="formListarContato" runat="server">
+        <div class="row m-2">
+            <div class="col-md-1">
+                <asp:Label ID="lblId" for="txtId" class="form-label" runat="server">Codigo</asp:Label>
+                <asp:TextBox ID="txtId" type="text" class="form-control" runat="server" />
             </div>
             <div class="col-md-2">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
+                <asp:Label for="txtNome" class="form-label" runat="server">Nome</asp:Label>
+                <asp:TextBox ID="txtNome" type="text" class="form-control" runat="server" />
             </div>
+            <div class="col-md-2">
+                <asp:Label ID="lblSobreNome" for="txtSobreNome" class="form-label" runat="server">Sobre Nome</asp:Label>
+                <asp:TextBox ID="txtSobreNome" type="text" class="form-control" runat="server" />
+            </div>
+            <div class="col-md-3">
+                <asp:Label ID="lblEmail" for="txtEmail" class="form-label" runat="server">Email</asp:Label>
+                <asp:TextBox ID="txtEmail" type="text" class="form-control" runat="server" />
+            </div>
+            <div class="col-md-2">
+                <asp:Label ID="lblTelefone" for="txtTelefone" class="form-label" runat="server">Telefone</asp:Label>
+                <asp:TextBox ID="txtTelefone" type="text" class="form-control" runat="server" />
+            </div>
+        </div>
+        <div class="row m-2">
             <div class="col-md-2">
                 <asp:Button ID="btnConsultar" type="submit" Text="Consultar" class="btn btn-success" runat="server" OnClick="btnConsultar_Click" />
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
     <table class="table">
         <thead>
             <tr>

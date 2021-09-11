@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using SisContatos.domain.exception;
 using System.Collections.Generic;
+using System.Data.Common;
 
 namespace SisContatos.domain.dao
 {
@@ -14,6 +15,7 @@ namespace SisContatos.domain.dao
         private SqlCommand sqlCommand = null;
         private SqlConnection sqlConnection = null;
         private SqlDataReader sqlDataReader = null;
+        private DbDataReader dbDataReader;
         private static string CONEXAO = ConfigurationManager.AppSettings["sqlConnection"];
 
         /// <summary>
@@ -83,7 +85,7 @@ namespace SisContatos.domain.dao
         /// <param name="parameters">
         /// Lista de parametros
         /// </param>
-        public SqlDataReader CommandSelect(string queryString, List<SqlParameter> parameters)
+        public DbDataReader CommandSelect(string queryString, List<SqlParameter> parameters)
         {
             try
             {
@@ -95,7 +97,8 @@ namespace SisContatos.domain.dao
                         sqlCommand.Parameters.Add(sqlParameter);
                     }
                     sqlCommand.Connection.Open();
-                    sqlDataReader = sqlCommand.ExecuteReader();
+
+                    dbDataReader = sqlCommand.ExecuteReader();
                 }
             }
             catch (SqlException ex)
@@ -106,7 +109,7 @@ namespace SisContatos.domain.dao
             {
                 sqlCommand.Connection.Close();
             }
-            return sqlDataReader;
+            return dbDataReader;
         }
     }
 }
