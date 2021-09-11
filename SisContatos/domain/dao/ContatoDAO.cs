@@ -12,6 +12,7 @@ namespace SisContatos.domain.dao
     {
         private string sql;
         private DbDataReader dbDataReader = null;
+        private List<Contato> contatos = null;
         void IContatoService.Adicionar(Contato contato)
         {
             try
@@ -52,13 +53,23 @@ namespace SisContatos.domain.dao
                 parameters.Add(new SqlParameter("@telefone", contato.Telefone));
                 dbDataReader = base.CommandSelect(sql, parameters);
                 if (dbDataReader.HasRows)
-                    return null;
+                {
+                    foreach(Contato c in dbDataReader)
+                    {
+                        c.Id = Int32.Parse(dbDataReader["id"].ToString());
+                        c.Nome = dbDataReader["nome"].ToString();
+                        c.SobreNome = dbDataReader["sobre_nome"].ToString();
+                        c.Email = dbDataReader["email"].ToString();
+                        c.Telefone = dbDataReader["telefone"].ToString();
+                        contatos.Add(c);
+                    }
+                }
             }
             catch (SqlException ex)
             {
                 throw new SelecioneException("ContatoDAO", ex);
             }
-            return null;
+            return contatos;
         }
     }
 }
