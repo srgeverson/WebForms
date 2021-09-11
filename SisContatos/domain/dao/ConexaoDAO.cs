@@ -26,11 +26,11 @@ namespace SisContatos.domain.dao
         {
             try
             {
-                using (connection = new SqlConnection(CONEXAO))
+                using (sqlConnection = new SqlConnection(CONEXAO))
                 {
-                    command = new SqlCommand(queryString, connection);
-                    command.Connection.Open();
-                    command.ExecuteNonQuery();
+                    sqlCommand = new SqlCommand(queryString, sqlConnection);
+                    sqlCommand.Connection.Open();
+                    sqlCommand.ExecuteNonQuery();
                 }
             }
             catch (SqlException ex)
@@ -39,7 +39,7 @@ namespace SisContatos.domain.dao
             }
             finally
             {
-                command.Connection.Close();
+                sqlCommand.Connection.Close();
             }
         }
 
@@ -53,15 +53,15 @@ namespace SisContatos.domain.dao
         {
             try
             {
-                using (connection = new SqlConnection(CONEXAO))
+                using (sqlConnection = new SqlConnection(CONEXAO))
                 {
-                    command = new SqlCommand(queryString, connection);
+                    sqlCommand = new SqlCommand(queryString, sqlConnection);
                     foreach (SqlParameter sqlParameter in parameters)
                     {
-                        command.Parameters.Add(sqlParameter);
+                        sqlCommand.Parameters.Add(sqlParameter);
                     }
-                    command.Connection.Open();
-                    command.ExecuteNonQuery();
+                    sqlCommand.Connection.Open();
+                    sqlCommand.ExecuteNonQuery();
                 }
             }
             catch (SqlException ex)
@@ -70,7 +70,7 @@ namespace SisContatos.domain.dao
             }
             finally
             {
-                command.Connection.Close();
+                sqlCommand.Connection.Close();
             }
         }
 

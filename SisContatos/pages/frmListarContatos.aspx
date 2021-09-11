@@ -3,6 +3,23 @@
 <asp:Content ID="contentFrmListarContatosHead" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="contentFrmListarContatos" ContentPlaceHolderID="contentPlaceHolderFrmMaster" runat="server">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+        </div>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -13,7 +30,7 @@
                 <th scope="col">Telefone</th>
             </tr>
         </thead>
-        <tbody>          
+        <tbody>
         </tbody>
     </table>
 </asp:Content>
