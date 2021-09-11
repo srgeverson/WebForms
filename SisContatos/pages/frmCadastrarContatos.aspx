@@ -23,7 +23,7 @@
             <asp:TextBox type="tel" class="form-control" ID="txtTelefone" placeholder="Seu telefone" runat="server" />
         </div>
         <div class="col-12 mt-2">
-            <asp:Button ID="btnSalvar" type="submit" Text="Salvar" class="btn btn-primary" runat="server" />
+            <asp:Button ID="btnSalvar" type="submit" Text="Salvar" class="btn btn-primary" runat="server" OnClick="btnSalvar_Click" />
         </div>
     </form>
 </asp:Content>
