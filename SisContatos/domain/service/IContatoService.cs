@@ -1,5 +1,4 @@
 ﻿using SisContatos.domain.model;
-using System;
 using System.Collections.Generic;
 
 namespace SisContatos.domain.service
