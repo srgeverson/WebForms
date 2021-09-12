@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="https://localhost:44350/pages/frmListarContatos.aspx">Listar Contatos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44350/pages/frmAlterarContatos.aspx">Alterar Contatos</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-10">

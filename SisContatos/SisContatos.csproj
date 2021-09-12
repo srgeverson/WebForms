@@ -81,6 +81,7 @@
   <ItemGroup>
     <Content Include="assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="pages\frmAlterarContatos.aspx" />
     <Content Include="pages\frmCadastrarContatos.aspx" />
     <Content Include="pages\frmListarContatos.aspx" />
     <Content Include="Web.config" />
@@ -96,6 +97,13 @@
     <Compile Include="domain\model\Contato.cs" />
     <Compile Include="domain\service\IContatoService.cs" />
     <Compile Include="domain\sql\ContatoSQL.cs" />
+    <Compile Include="pages\frmAlterarContatos.aspx.cs">
+      <DependentUpon>frmAlterarContatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\frmAlterarContatos.aspx.designer.cs">
+      <DependentUpon>frmAlterarContatos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\frmCadastrarContatos.aspx.cs">
       <DependentUpon>frmCadastrarContatos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -14,6 +14,7 @@ namespace SisContatos.domain.dao
         private string sql;
         private DataTable dataTable = null;
         private List<Contato> contatos = null;
+        private Contato contato = null;
         void IContatoService.Adicionar(Contato contato)
         {
             try
@@ -31,6 +32,40 @@ namespace SisContatos.domain.dao
             {
                 throw new InserirException("ContatoDAO", ex);
             }
+        }
+
+        Contato IContatoService.Buscar(int id)
+        {
+            try
+            {
+                sql = "";
+                sql += "SELECT ";
+                sql += "c.id, c.nome, c.sobre_nome, c.email, c.telefone ";
+                sql += "FROM ";
+                sql += "contatos c ";
+                sql += "WHERE ";
+                sql += "c.id = '" + id + "'";
+                dataTable = base.CommandSelect(sql);
+                if (dataTable.Rows.Count == 1)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        contato = new Contato();
+                        contato.Id = Int32.Parse(row["id"].ToString());
+                        contato.Nome = row["nome"].ToString();
+                        contato.SobreNome = row["sobre_nome"].ToString();
+                        contato.Email = row["email"].ToString();
+                        contato.Telefone = row["telefone"].ToString();
+
+                    }
+                    return contato;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new SelecioneException("ContatoDAO", ex);
+            }
+            return null;
         }
 
         List<Contato> IContatoService.Listar(Contato contato)

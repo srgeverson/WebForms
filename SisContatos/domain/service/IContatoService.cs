@@ -7,6 +7,8 @@ namespace SisContatos.domain.service
     {
         void Adicionar(Contato contato);
 
+        Contato Buscar(int id);
+
         List<Contato> Listar(Contato contato);
     }
 }

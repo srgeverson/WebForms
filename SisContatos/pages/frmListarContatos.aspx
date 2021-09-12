@@ -31,6 +31,8 @@
                 <asp:Button ID="btnConsultar" type="submit" Text="Consultar" class="btn btn-success" runat="server" OnClick="btnConsultar_Click" />
             </div>
         </div>
-    <asp:GridView class="table m-2" ID="gdvContatos" runat="server"></asp:GridView>
+        <div class="row m-2">
+            <asp:GridView class="table" ID="gdvContatos" runat="server"></asp:GridView>
+        </div>
     </form>
 </asp:Content>
