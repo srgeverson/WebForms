@@ -81,6 +81,9 @@
   <ItemGroup>
     <Content Include="assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\jquery\jquery-3.6.0.js" />
+    <Content Include="assets\jquery\jquery.mask.js" />
+    <Content Include="assets\jquery\mascaras.js" />
     <Content Include="pages\frmAlterarContatos.aspx" />
     <Content Include="pages\frmCadastrarContatos.aspx" />
     <Content Include="pages\frmExcluirContatos.aspx" />
