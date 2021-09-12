@@ -7,7 +7,7 @@
         <div class="row m-2">
             <div class="col-md-1">
                 <asp:Label ID="lblId" for="txtId" class="form-label" runat="server">Codigo</asp:Label>
-                <asp:TextBox ID="txtId" type="text" class="form-control" runat="server" />
+                <asp:TextBox ID="txtId" type="number" class="form-control" runat="server" />
             </div>
             <div class="col-md-2">
                 <asp:Label for="txtNome" class="form-label" runat="server">Nome</asp:Label>
@@ -31,18 +31,6 @@
                 <asp:Button ID="btnConsultar" type="submit" Text="Consultar" class="btn btn-success" runat="server" OnClick="btnConsultar_Click" />
             </div>
         </div>
+    <asp:GridView class="table m-2" ID="gdvContatos" runat="server"></asp:GridView>
     </form>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Código</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Sobre Nome</th>
-                <th scope="col">Email</th>
-                <th scope="col">Telefone</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
 </asp:Content>

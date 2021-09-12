@@ -5,13 +5,14 @@ using SisContatos.domain.exception;
 using System.Collections.Generic;
 using System.Data.Common;
 using SisContatos.domain.service;
+using System.Data;
 
 namespace SisContatos.domain.dao
 {
     public class ContatoDAO : ConexaoDAO, IContatoService
     {
         private string sql;
-        private DbDataReader dbDataReader = null;
+        private DataTable dataTable = null;
         private List<Contato> contatos = null;
         void IContatoService.Adicionar(Contato contato)
         {
@@ -38,29 +39,34 @@ namespace SisContatos.domain.dao
             {
                 sql = "";
                 sql += "SELECT ";
-                sql += "c.nome, c.sobre_nome, c.email, c.telefone ";
+                sql += "c.id, c.nome, c.sobre_nome, c.email, c.telefone ";
                 sql += "FROM ";
                 sql += "contatos c ";
                 sql += "WHERE ";
-                sql += "c.nome LIKE '%@nome%' AND ";
-                sql += "c.sobre_nome LIKE '%@sobre_nome%' AND ";
-                sql += "c.email LIKE '%@email%' AND ";
-                sql += "c.telefone LIKE '%@telefone%'";
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                parameters.Add(new SqlParameter("@nome", contato.Nome));
-                parameters.Add(new SqlParameter("@sobre_nome", contato.SobreNome));
-                parameters.Add(new SqlParameter("@email", contato.Email));
-                parameters.Add(new SqlParameter("@telefone", contato.Telefone));
-                dbDataReader = base.CommandSelect(sql, parameters);
-                if (dbDataReader.HasRows)
+                if (contato.Id == 0)
                 {
-                    foreach(Contato c in dbDataReader)
+                    sql += "c.id LIKE '%%' AND ";
+                }
+                else
+                {
+                    sql += "c.id LIKE '%" + contato.Id + "%' AND ";
+                }
+                sql += "c.nome LIKE '%" + contato.Nome + "%' AND ";
+                sql += "c.sobre_nome LIKE '%" + contato.SobreNome + "%' AND ";
+                sql += "c.email LIKE '%" + contato.Email + "%' AND ";
+                sql += "c.telefone LIKE '%" + contato.Telefone + "%'";
+                dataTable = base.CommandSelect(sql);
+                contatos = new List<Contato>();
+                if (dataTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
                     {
-                        c.Id = Int32.Parse(dbDataReader["id"].ToString());
-                        c.Nome = dbDataReader["nome"].ToString();
-                        c.SobreNome = dbDataReader["sobre_nome"].ToString();
-                        c.Email = dbDataReader["email"].ToString();
-                        c.Telefone = dbDataReader["telefone"].ToString();
+                        var c = new Contato();
+                        c.Id = Int32.Parse(row["id"].ToString());
+                        c.Nome = row["nome"].ToString();
+                        c.SobreNome = row["sobre_nome"].ToString();
+                        c.Email = row["email"].ToString();
+                        c.Telefone = row["telefone"].ToString();
                         contatos.Add(c);
                     }
                 }
