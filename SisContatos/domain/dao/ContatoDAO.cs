@@ -3,7 +3,6 @@ using System.Data.SqlClient;
 using SisContatos.domain.model;
 using SisContatos.domain.exception;
 using System.Collections.Generic;
-using System.Data.Common;
 using SisContatos.domain.service;
 using System.Data;
 
@@ -30,7 +29,35 @@ namespace SisContatos.domain.dao
             }
             catch (SqlException ex)
             {
-                throw new InserirException("ContatoDAO", ex);
+                throw new InserirException("ContatoDAO.Adicionar", ex);
+            }
+        }
+
+        void IContatoService.Alterar(Contato contato)
+        {
+            try
+            {
+                sql = "";
+                sql += "UPDATE ";
+                sql += "contatos ";
+                sql += "SET ";
+                sql += "nome = @nome, ";
+                sql += "sobre_nome = @sobre_nome, ";
+                sql += "email = @email, ";
+                sql += "telefone = @telefone ";
+                sql += "WHERE ";
+                sql += "id = @id";
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("@id", contato.Id));
+                parameters.Add(new SqlParameter("@nome", contato.Nome));
+                parameters.Add(new SqlParameter("@sobre_nome", contato.SobreNome));
+                parameters.Add(new SqlParameter("@email", contato.Email));
+                parameters.Add(new SqlParameter("@telefone", contato.Telefone));
+                base.CommandUpdate(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new InserirException("ContatoDAO.Alterar", ex);
             }
         }
 
@@ -63,7 +90,7 @@ namespace SisContatos.domain.dao
             }
             catch (SqlException ex)
             {
-                throw new SelecioneException("ContatoDAO", ex);
+                throw new SelecioneException("ContatoDAO.Buscar", ex);
             }
             return null;
         }
@@ -108,7 +135,7 @@ namespace SisContatos.domain.dao
             }
             catch (SqlException ex)
             {
-                throw new SelecioneException("ContatoDAO", ex);
+                throw new SelecioneException("ContatoDAO.Listar", ex);
             }
             return contatos;
         }

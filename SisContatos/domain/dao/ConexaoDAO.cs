@@ -16,13 +16,13 @@ namespace SisContatos.domain.dao
         private DataTable dataTable = null;
         private SqlDataAdapter sqlDataAdapter = null;
 
-        public void CommandInsert(string queryString, List<SqlParameter> parameters)
+        public void CommandInsert(string sql, List<SqlParameter> parameters)
         {
             try
             {
                 using (sqlConnection = new SqlConnection(CONEXAO))
                 {
-                    sqlCommand = new SqlCommand(queryString, sqlConnection);
+                    sqlCommand = new SqlCommand(sql, sqlConnection);
                     foreach (SqlParameter sqlParameter in parameters)
                     {
                         sqlCommand.Parameters.Add(sqlParameter);
@@ -33,7 +33,7 @@ namespace SisContatos.domain.dao
             }
             catch (SqlException ex)
             {
-                throw new InserirException("ConexaoDAO", ex);
+                throw new InserirException("ConexaoDAO.CommandInsert", ex);
             }
             finally
             {
@@ -41,13 +41,13 @@ namespace SisContatos.domain.dao
             }
         }
 
-        public DataTable CommandSelect(string queryString)
+        public DataTable CommandSelect(string sql)
         {
             try
             {
                 using (sqlConnection = new SqlConnection(CONEXAO))
                 {
-                    sqlCommand = new SqlCommand(queryString, sqlConnection);
+                    sqlCommand = new SqlCommand(sql, sqlConnection);
                     sqlCommand.Connection.Open();
                     sqlDataAdapter = new SqlDataAdapter();
                     sqlDataAdapter.SelectCommand = sqlCommand;
@@ -57,9 +57,34 @@ namespace SisContatos.domain.dao
             }
             catch (SqlException ex)
             {
-                throw new SelecioneException("ConexaoDAO", ex);
+                throw new SelecioneException("ConexaoDAO.CommandSelect", ex);
             }
             return dataTable;
+        }
+
+        public void CommandUpdate(string sql, List<SqlParameter> parameters)
+        {
+            try
+            {
+                using (sqlConnection = new SqlConnection(CONEXAO))
+                {
+                    sqlCommand = new SqlCommand(sql, sqlConnection);
+                    foreach (SqlParameter sqlParameter in parameters)
+                    {
+                        sqlCommand.Parameters.Add(sqlParameter);
+                    }
+                    sqlCommand.Connection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new InserirException("ConexaoDAO.CommandUpdate", ex);
+            }
+            finally
+            {
+                sqlCommand.Connection.Close();
+            }
         }
     }
 }
