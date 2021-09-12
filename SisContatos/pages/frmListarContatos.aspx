@@ -6,24 +6,24 @@
     <form id="formListarContato" runat="server">
         <div class="row m-2">
             <div class="col-md-1">
-                <asp:Label ID="lblId" for="txtId" class="form-label" runat="server">Codigo</asp:Label>
-                <asp:TextBox ID="txtId" type="number" class="form-control" runat="server" />
+                <asp:Label ID="lblId" for="txtId" class="form-label" runat="server">Código</asp:Label>
+                <asp:TextBox ID="txtId" type="number" class="form-control" placeholder="Código" runat="server" />
             </div>
             <div class="col-md-2">
                 <asp:Label for="txtNome" class="form-label" runat="server">Nome</asp:Label>
-                <asp:TextBox ID="txtNome" type="text" class="form-control" runat="server" />
+                <asp:TextBox ID="txtNome" type="text" class="form-control" placeholder="Nome" runat="server" />
             </div>
             <div class="col-md-2">
                 <asp:Label ID="lblSobreNome" for="txtSobreNome" class="form-label" runat="server">Sobre Nome</asp:Label>
-                <asp:TextBox ID="txtSobreNome" type="text" class="form-control" runat="server" />
+                <asp:TextBox ID="txtSobreNome" type="text" class="form-control" placeholder="Sobre nome" runat="server" />
             </div>
             <div class="col-md-3">
-                <asp:Label ID="lblEmail" for="txtEmail" class="form-label" runat="server">Email</asp:Label>
-                <asp:TextBox ID="txtEmail" type="text" class="form-control" runat="server" />
+                <asp:Label ID="lblEmail" for="txtEmail" class="form-label" runat="server">E-mail</asp:Label>
+                <asp:TextBox ID="txtEmail" type="text" class="form-control" placeholder="E-mail" runat="server" />
             </div>
             <div class="col-md-2">
                 <asp:Label ID="lblTelefone" for="txtTelefone" class="form-label" runat="server">Telefone</asp:Label>
-                <asp:TextBox ID="txtTelefone" type="text" class="form-control" runat="server" />
+                <asp:TextBox ID="txtTelefone" type="text" class="form-control telefone" placeholder="Telefone" runat="server" />
             </div>
         </div>
         <div class="row m-2">
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="row m-2">
-            <asp:GridView class="table" ID="gdvContatos" runat="server"></asp:GridView>
+            <asp:GridView class="table table-hover" ID="gdvContatos" runat="server"></asp:GridView>
         </div>
     </form>
 </asp:Content>

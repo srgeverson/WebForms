@@ -24,8 +24,8 @@
         </div>
         <div class="row mt-2">
             <div class="col-md-1">
-                <asp:Label ID="lblId" for="txtId" class="form-label" runat="server">Id</asp:Label>
-                <asp:TextBox type="number" class="form-control" ID="txtId" placeholder="Id para alterar" runat="server" />
+                <asp:Label ID="lblId" for="txtId" class="form-label" runat="server">Código</asp:Label>
+                <asp:TextBox type="number" class="form-control" ID="txtId" placeholder="Código" runat="server" />
             </div>
             <div class="col-md-2">
                 <br />
@@ -50,7 +50,7 @@
         </div>
         <div class="col-12">
             <asp:Label ID="lblTelefone" for="txtTelefone" class="form-label" runat="server">Telefone</asp:Label>
-            <asp:TextBox type="tel" class="form-control" ID="txtTelefone" placeholder="Seu telefone" runat="server" />
+            <asp:TextBox type="tel" class="form-control telefone" ID="txtTelefone" placeholder="Seu telefone" runat="server" />
         </div>
         <div class="col-12 mt-2">
             <asp:Button ID="btnExcluir" type="submit" Text="Excluir" class="btn btn-danger" runat="server" OnClick="btnExcluir_Click" />
