@@ -12,8 +12,17 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 
-### Criando o Projeto
-$ Aplicativo Web ASP .NET(Framework .NET)
+### Aplicativo Web ASP .NET
+$ [Framework .NET](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+
+### Bootstrap 5
+$[Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+
+### Jquery 3.6.0
+$ [Jquery](https://jquery.com/)
+
+### JQuery Mask
+$ [JQuery Mask-Plugin/docs](https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
 
 ```
 
