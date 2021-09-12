@@ -95,6 +95,26 @@ namespace SisContatos.domain.dao
             return null;
         }
 
+        void IContatoService.Excluir(int id)
+        {
+            try
+            {
+                sql = "";
+                sql += "DELETE ";
+                sql += "FROM ";
+                sql += "contatos ";
+                sql += "WHERE ";
+                sql += "id = @id";
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("@id", id));
+                base.CommandDelete(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new InserirException("ContatoDAO.Alterar", ex);
+            }
+        }
+
         List<Contato> IContatoService.Listar(Contato contato)
         {
             try

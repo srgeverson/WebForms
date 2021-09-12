@@ -83,6 +83,7 @@
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="pages\frmAlterarContatos.aspx" />
     <Content Include="pages\frmCadastrarContatos.aspx" />
+    <Content Include="pages\frmExcluirContatos.aspx" />
     <Content Include="pages\frmListarContatos.aspx" />
     <Content Include="Web.config" />
     <Content Include="frmIndex.aspx" />
@@ -90,6 +91,8 @@
   <ItemGroup>
     <Compile Include="domain\dao\ConexaoDAO.cs" />
     <Compile Include="domain\dao\ContatoDAO.cs" />
+    <Compile Include="domain\exception\ExcluirException.cs" />
+    <Compile Include="domain\exception\AlterarException.cs" />
     <Compile Include="domain\exception\SelecioneException.cs" />
     <Compile Include="domain\exception\NegocioException.cs" />
     <Compile Include="domain\exception\InserirException.cs" />
@@ -110,6 +113,13 @@
     </Compile>
     <Compile Include="pages\frmCadastrarContatos.aspx.designer.cs">
       <DependentUpon>frmCadastrarContatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\frmExcluirContatos.aspx.cs">
+      <DependentUpon>frmExcluirContatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\frmExcluirContatos.aspx.designer.cs">
+      <DependentUpon>frmExcluirContatos.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\frmMaster.Master.cs">
       <DependentUpon>frmMaster.Master</DependentUpon>

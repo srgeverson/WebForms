@@ -34,6 +34,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="https://localhost:44350/pages/frmAlterarContatos.aspx">Alterar Contatos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44350/pages/frmExcluirContatos.aspx">Excluir Contatos</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-10">

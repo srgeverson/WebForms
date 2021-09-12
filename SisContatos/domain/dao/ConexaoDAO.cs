@@ -1,9 +1,7 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Configuration;
 using SisContatos.domain.exception;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Data;
 
 namespace SisContatos.domain.dao
@@ -16,7 +14,32 @@ namespace SisContatos.domain.dao
         private DataTable dataTable = null;
         private SqlDataAdapter sqlDataAdapter = null;
 
-        public void CommandInsert(string sql, List<SqlParameter> parameters)
+        internal void CommandDelete(string sql, List<SqlParameter> parameters)
+        {
+            try
+            {
+                using (sqlConnection = new SqlConnection(CONEXAO))
+                {
+                    sqlCommand = new SqlCommand(sql, sqlConnection);
+                    foreach (SqlParameter sqlParameter in parameters)
+                    {
+                        sqlCommand.Parameters.Add(sqlParameter);
+                    }
+                    sqlCommand.Connection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new ExcluirException("ConexaoDAO.CommandDelete", ex);
+            }
+            finally
+            {
+                sqlCommand.Connection.Close();
+            }
+        }
+
+        internal void CommandInsert(string sql, List<SqlParameter> parameters)
         {
             try
             {
@@ -41,7 +64,7 @@ namespace SisContatos.domain.dao
             }
         }
 
-        public DataTable CommandSelect(string sql)
+        internal DataTable CommandSelect(string sql)
         {
             try
             {
@@ -62,7 +85,7 @@ namespace SisContatos.domain.dao
             return dataTable;
         }
 
-        public void CommandUpdate(string sql, List<SqlParameter> parameters)
+        internal void CommandUpdate(string sql, List<SqlParameter> parameters)
         {
             try
             {
@@ -79,12 +102,13 @@ namespace SisContatos.domain.dao
             }
             catch (SqlException ex)
             {
-                throw new InserirException("ConexaoDAO.CommandUpdate", ex);
+                throw new AlterarException("ConexaoDAO.CommandUpdate", ex);
             }
             finally
             {
                 sqlCommand.Connection.Close();
             }
         }
+
     }
 }
