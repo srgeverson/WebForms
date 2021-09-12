@@ -16,21 +16,39 @@ namespace SisContatos.pages
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            var contato = new Contato();
-            contato.Nome = txtNome.Text;
-            contato.SobreNome = txtSobrenome.Text;
-            contato.Email = txtEmail.Text;
-            contato.Telefone = txtTelefone.Text;
-            contatoService.Adicionar(contato);
-            limparCampos();
+            try
+            {
+                var contato = new Contato();
+                contato.Nome = txtNome.Text;
+                contato.SobreNome = txtSobrenome.Text;
+                contato.Email = txtEmail.Text;
+                contato.Telefone = txtTelefone.Text;
+                contatoService.Adicionar(contato);
+                LimparCampos();
+                InformaOperacao("", "", "Cadastro realizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                InformaOperacao("", "Erro ao realizar cadastro! Erro: " + ex.Message, "");
+            }
         }
 
-        private void limparCampos()
+        private void LimparCampos()
         {
             txtNome.Text = "";
-             txtSobrenome.Text = "";
+            txtSobrenome.Text = "";
             txtEmail.Text = "";
             txtTelefone.Text = "";
+        }
+
+        private void InformaOperacao(string atencao, string erro, string informacao)
+        {
+            lblAtencao.Text = atencao;
+            pnlAtencao.Visible = !string.IsNullOrEmpty(atencao);
+            lblErro.Text = erro;
+            pnlErro.Visible = !string.IsNullOrEmpty(erro);
+            lblInformacao.Text = informacao;
+            pnlInformacao.Visible = !string.IsNullOrEmpty(informacao);
         }
     }
 }
