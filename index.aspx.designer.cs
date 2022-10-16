@@ -11,7 +11,7 @@ namespace SisContatos
 {
 
 
-    public partial class frmIndex
+    public partial class index
     {
     }
 }

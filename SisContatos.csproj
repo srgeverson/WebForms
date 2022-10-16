@@ -100,12 +100,12 @@
     <Content Include="assets\jquery\jquery-3.6.0.js" />
     <Content Include="assets\jquery\jquery.mask.js" />
     <Content Include="assets\jquery\mascaras.js" />
+    <Content Include="index.aspx" />
     <Content Include="pages\frmAlterarContatos.aspx" />
     <Content Include="pages\frmCadastrarContatos.aspx" />
     <Content Include="pages\frmExcluirContatos.aspx" />
     <Content Include="pages\frmListarContatos.aspx" />
     <Content Include="Web.config" />
-    <Content Include="frmIndex.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="domain\dao\ConexaoDAO.cs" />
@@ -119,6 +119,13 @@
     <Compile Include="domain\model\Contato.cs" />
     <Compile Include="domain\service\IContatoService.cs" />
     <Compile Include="domain\sql\ContatoSQL.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\frmAlterarContatos.aspx.cs">
       <DependentUpon>frmAlterarContatos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -155,13 +162,6 @@
       <DependentUpon>frmListarContatos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="frmIndex.aspx.cs">
-      <DependentUpon>frmIndex.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmIndex.aspx.designer.cs">
-      <DependentUpon>frmIndex.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\bootstrap\css\bootstrap.css.map" />

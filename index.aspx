@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmIndex.aspx.cs" Inherits="SisContatos.frmIndex" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/frmMaster.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SisContatos.index" %>
 
 <asp:Content ID="contentFrmIndexHead" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
