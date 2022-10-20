@@ -156,8 +156,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="pages\FormAlterarEmSQL.aspx" />
+    <Content Include="pages\FormListarEmSQL.aspx" />
+    <Content Include="pages\FormExcluirEmSQL.aspx" />
+    <Content Include="pages\FormCadastroEmSQL.aspx" />
+    <Content Include="pages\FormCadastroEmMemoria.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -217,20 +220,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="domain\dao\ConexaoDAO.cs" />
+    <Compile Include="domain\dao\ContatoDAO.cs" />
+    <Compile Include="domain\exception\AlterarException.cs" />
+    <Compile Include="domain\exception\ConexaoException.cs" />
+    <Compile Include="domain\exception\ExcluirException.cs" />
+    <Compile Include="domain\exception\InserirException.cs" />
+    <Compile Include="domain\exception\NegocioException.cs" />
+    <Compile Include="domain\exception\SelecioneException.cs" />
+    <Compile Include="domain\model\Contato.cs" />
+    <Compile Include="domain\service\IContatoService.cs" />
+    <Compile Include="domain\sql\ContatoSQL.cs" />
+    <Compile Include="pages\FormAlterarEmSQL.aspx.cs">
+      <DependentUpon>FormAlterarEmSQL.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="pages\FormAlterarEmSQL.aspx.designer.cs">
+      <DependentUpon>FormAlterarEmSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\FormListarEmSQL.aspx.cs">
+      <DependentUpon>FormListarEmSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\FormListarEmSQL.aspx.designer.cs">
+      <DependentUpon>FormListarEmSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\FormExcluirEmSQL.aspx.cs">
+      <DependentUpon>FormExcluirEmSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\FormExcluirEmSQL.aspx.designer.cs">
+      <DependentUpon>FormExcluirEmSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\FormCadastroEmSQL.aspx.cs">
+      <DependentUpon>FormCadastroEmSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\FormCadastroEmSQL.aspx.designer.cs">
+      <DependentUpon>FormCadastroEmSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\FormCadastroEmMemoria.aspx.cs">
+      <DependentUpon>FormCadastroEmMemoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\FormCadastroEmMemoria.aspx.designer.cs">
+      <DependentUpon>FormCadastroEmMemoria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
