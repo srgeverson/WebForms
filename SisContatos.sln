@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisContatos", "SisContatos.csproj", "{E7DB6942-1B71-418B-935F-BF633C35ADEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppClassLibraryDomain", "..\AppClassLibraryDomain\AppClassLibraryDomain.csproj", "{65A88341-C457-42B2-8C3E-93AE8140F39B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E7DB6942-1B71-418B-935F-BF633C35ADEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7DB6942-1B71-418B-935F-BF633C35ADEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7DB6942-1B71-418B-935F-BF633C35ADEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A88341-C457-42B2-8C3E-93AE8140F39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A88341-C457-42B2-8C3E-93AE8140F39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A88341-C457-42B2-8C3E-93AE8140F39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A88341-C457-42B2-8C3E-93AE8140F39B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
