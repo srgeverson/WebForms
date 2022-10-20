@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Web.UI;
-using SisContatos.domain.service;
 using SisContatos.domain.model;
-using SisContatos.domain.dao;
+using SisContatos.domain.service;
 
 namespace SisContatos
 {
@@ -12,7 +11,7 @@ namespace SisContatos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            contatoService = new ContatoDAO();
+            //contatoService = new ContatoDAO();
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)

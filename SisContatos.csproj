@@ -221,17 +221,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="domain\dao\ConexaoDAO.cs" />
-    <Compile Include="domain\dao\ContatoDAO.cs" />
-    <Compile Include="domain\exception\AlterarException.cs" />
-    <Compile Include="domain\exception\ConexaoException.cs" />
-    <Compile Include="domain\exception\ExcluirException.cs" />
-    <Compile Include="domain\exception\InserirException.cs" />
-    <Compile Include="domain\exception\NegocioException.cs" />
-    <Compile Include="domain\exception\SelecioneException.cs" />
-    <Compile Include="domain\model\Contato.cs" />
-    <Compile Include="domain\service\IContatoService.cs" />
-    <Compile Include="domain\sql\ContatoSQL.cs" />
     <Compile Include="pages\FormAlterarEmSQL.aspx.cs">
       <DependentUpon>FormAlterarEmSQL.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -319,6 +308,12 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppClassLibraryDomain\AppClassLibraryDomain.csproj">
+      <Project>{65A88341-C457-42B2-8C3E-93AE8140F39B}</Project>
+      <Name>AppClassLibraryDomain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.UI;
-using SisContatos.domain.dao;
 using SisContatos.domain.model;
 using SisContatos.domain.service;
 
@@ -13,7 +12,7 @@ namespace SisContatos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            contatoService = new ContatoDAO();
+            //contatoService = new ContatoDAO();
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
