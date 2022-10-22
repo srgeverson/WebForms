@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AppClassLibraryDomain.model;
+using AppClassLibraryDomain.service;
+using System;
 using System.Web.UI;
-using SisContatos.domain.model;
-using SisContatos.domain.service;
 
 namespace SisContatos
 {

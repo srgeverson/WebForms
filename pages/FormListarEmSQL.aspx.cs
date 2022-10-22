@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Web.UI;
+using AppClassLibraryDomain.model;
+using AppClassLibraryDomain.service;
 using AppClassLibraryDomain.service.implementations;
-using SisContatos.domain.model;
-using SisContatos.domain.service;
 using Spring.Context;
 using Spring.Context.Support;
 

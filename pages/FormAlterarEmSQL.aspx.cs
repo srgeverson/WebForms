@@ -1,5 +1,5 @@
-﻿using SisContatos.domain.model;
-using SisContatos.domain.service;
+﻿using AppClassLibraryDomain.model;
+using AppClassLibraryDomain.service;
 using System;
 using System.Web.UI;
 
