@@ -11,7 +11,10 @@ namespace SisContatos
     public partial class FormListarEmSQL : Page
     {
         private static IApplicationContext CONTEXT = ContextRegistry.GetContext();
-        private static IContatoService contatoService;
+        private IContatoService contatoService;
+
+        public IContatoService ContatoService { set => contatoService = value; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //contatoService = new ContatoDAO();
@@ -39,8 +42,8 @@ namespace SisContatos
             }
             catch (Exception ex)
             {
-                lblErro.Visible = true;
                 lblErro.Text = ex.Message;
+                pnlErro.Visible = true;
             }
         }
     }

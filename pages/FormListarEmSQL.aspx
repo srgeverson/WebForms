@@ -3,20 +3,20 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
     <div class="row">
-         <div class="row mt-2">
+        <div class="row mt-2">
             <div class="col-md-12">
                 <asp:Panel ID="pnlAtencao" runat="server" Visible="false">
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <div class="alert alert-warning" role="alert">
                         <asp:Label ID="lblAtencao" runat="server">Atenção!</asp:Label>
                     </div>
                 </asp:Panel>
                 <asp:Panel ID="pnlInformacao" runat="server" Visible="false">
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <div class="alert alert-info" role="alert">
                         <asp:Label ID="lblInformacao" runat="server">Informação!</asp:Label>
                     </div>
                 </asp:Panel>
                 <asp:Panel ID="pnlErro" runat="server" Visible="false">
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <div class="alert alert-danger" role="alert">
                         <asp:Label ID="lblErro" runat="server">Erro!</asp:Label>
                     </div>
                 </asp:Panel>
