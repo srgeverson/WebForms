@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SisContatos
 {
     public partial class _Default : Page
     {
+        //private String message;
+        //private static IApplicationContext CONTEXT = ContextRegistry.GetContext();
+
+        public String Message { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //var teste = (String)CONTEXT.GetObject("message");
+            lblTeste.Text = Message;
         }
     }
 }

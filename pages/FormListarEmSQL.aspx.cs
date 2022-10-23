@@ -9,12 +9,13 @@ namespace SisContatos
 {
     public partial class FormListarEmSQL : Page
     {
-        private static IApplicationContext CONTEXT = ContextRegistry.GetContext();
-        private IContatoService contatoService;
-        private IUsuarioService usuarioService;
+        //private static IApplicationContext CONTEXT = ContextRegistry.GetContext();
+        //private IContatoService contatoService;
+        public IUsuarioService UsuarioService { private get; set; }
 
-        public IContatoService ContatoService { set => contatoService = value; }
-        public IUsuarioService UsuarioService { set => usuarioService = value; }
+        public IContatoService ContatoService { private get; set; }
+        //public IUsuarioService UsuarioService { set => usuarioService = value; }
+        public String Message { private get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,10 +23,12 @@ namespace SisContatos
             //if (!IsPostBack)
             //{
             //}
-            if (contatoService == null)
-                contatoService = (IContatoService)CONTEXT.GetObject("ContatoService");
-            if (usuarioService == null)
-                usuarioService = (IUsuarioService)CONTEXT.GetObject("UsuarioService");
+            //if (contatoService == null)
+            //    contatoService = (IContatoService)CONTEXT.GetObject("ContatoService");
+            //if (UsuarioService == null)
+            //    UsuarioService = (IUsuarioService)CONTEXT.GetObject("UsuarioService");
+            pnlInformacao.Visible = true;
+            lblInformacao.Text = Message;
         }
 
         protected void btnConsultar_Click(object sender, EventArgs e)
@@ -40,8 +43,8 @@ namespace SisContatos
                 contato.SobreNome = txtSobreNome.Text;
                 contato.Email = txtEmail.Text;
                 contato.Telefone = txtTelefone.Text;
-                //gdvContatos.DataSource = contatoService.Listar(contato);
-                gdvContatos.DataSource = usuarioService.Listar(new Usuario());
+                gdvContatos.DataSource = ContatoService.Listar(contato);
+                var usuarios = UsuarioService.Listar(new Usuario());
                 gdvContatos.DataBind();
             }
             catch (Exception ex)

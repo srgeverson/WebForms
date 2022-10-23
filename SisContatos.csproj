@@ -156,6 +156,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\dao.xml" />
+    <Content Include="Config\services.xml" />
+    <Content Include="Config\pages.xml" />
     <Content Include="pages\FormAlterarEmSQL.aspx" />
     <Content Include="pages\FormListarEmSQL.aspx" />
     <Content Include="pages\FormExcluirEmSQL.aspx" />
