@@ -6,3 +6,6 @@
 /obj/Debug
 /packages
 /.vs/SisContatos
+
+#Ignorar compilador
+!/bin/roslyn/

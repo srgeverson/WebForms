@@ -4,6 +4,8 @@ Sistema de Cadastro de Contatos
 ## 📌 Versão ainda em desenvolvimento
 0.0.1
 
+💡 Esta aplicaão utiliza o Compilador Roslyn 
+
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com) e ocomo [Visual Studio](https://visualstudio.microsoft.com/)
@@ -24,6 +26,8 @@ $ [Jquery](https://jquery.com/)
 ### JQuery Mask
 $ [JQuery Mask-Plugin/docs](https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
 
+### 
+$ [Spring.Web](https://www.nuget.org/packages/Spring.Web/1.3.2)
 ```
 
 #### 🎲 Rodando a aplicação
