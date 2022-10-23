@@ -2,17 +2,24 @@
 <objects xmlns="http://www.springframework.net">
 	<description>DI/IoC Pages</description>
 
-	<object name="FormListarEmSQL" type="~/pages/FormListarEmSQL.aspx" >
+	<object type="~/pages/FormAlterarEmSQL.aspx" >
 		<property name="ContatoService" ref="ContatoService" />
-		<property name="UsuarioService" ref="UsuarioService" />
-		<property name="Message" value="Hello from Web.Config"/>
 	</object>
 	
-	<object  name="Default" type="~/Default.aspx">
+	<object type="~/pages/FormCadastroEmSQL.aspx" >
+		<property name="ContatoService" ref="ContatoService" />
+	</object>
+
+	<object type="~/pages/FormListarEmSQL.aspx" >
+		<property name="ContatoService" ref="ContatoService" />
+	</object>
+
+	<object type="~/pages/FormExcluirEmSQL.aspx" >
+		<property name="ContatoService" ref="ContatoService" />
+	</object>
+
+	<object type="~/Default.aspx">
 		<property name="Message" value="Hello from Web.Config"/>
-		<!--<property name="Message" type="System.String">
-					<value>Hello from Web.Config</value>
-				</property>-->
 	</object>
 	
 </objects>

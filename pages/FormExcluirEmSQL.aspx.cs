@@ -8,6 +8,8 @@ namespace SisContatos
     public partial class FormExcluirEmSQL : Page
     {
         private IContatoService contatoService;
+        public IContatoService ContatoService { set => contatoService = value; }
+
         private Contato contato = null;
 
         protected void Page_Load(object sender, EventArgs e)

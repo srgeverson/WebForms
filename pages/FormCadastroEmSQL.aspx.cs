@@ -8,11 +8,9 @@ namespace SisContatos
     public partial class FormCadastroEmSQL : Page
     {
         private IContatoService contatoService;
+        public IContatoService ContatoService { set => contatoService = value; }
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            //contatoService = new ContatoDAO();
-        }
+        protected void Page_Load(object sender, EventArgs e) { }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -49,6 +47,11 @@ namespace SisContatos
             pnlErro.Visible = !string.IsNullOrEmpty(erro);
             lblInformacao.Text = informacao;
             pnlInformacao.Visible = !string.IsNullOrEmpty(informacao);
+        }
+
+        protected void btnLimpar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

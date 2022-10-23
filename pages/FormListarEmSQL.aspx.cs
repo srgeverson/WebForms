@@ -2,34 +2,15 @@
 using System.Web.UI;
 using AppClassLibraryDomain.model;
 using AppClassLibraryDomain.service;
-using Spring.Context;
-using Spring.Context.Support;
 
 namespace SisContatos
 {
     public partial class FormListarEmSQL : Page
     {
-        //private static IApplicationContext CONTEXT = ContextRegistry.GetContext();
-        //private IContatoService contatoService;
-        public IUsuarioService UsuarioService { private get; set; }
+        private IContatoService contatoService;
+        public IContatoService ContatoService { set => contatoService = value; }
 
-        public IContatoService ContatoService { private get; set; }
-        //public IUsuarioService UsuarioService { set => usuarioService = value; }
-        public String Message { private get; set; }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            //contatoService = new ContatoDAO();
-            //if (!IsPostBack)
-            //{
-            //}
-            //if (contatoService == null)
-            //    contatoService = (IContatoService)CONTEXT.GetObject("ContatoService");
-            //if (UsuarioService == null)
-            //    UsuarioService = (IUsuarioService)CONTEXT.GetObject("UsuarioService");
-            pnlInformacao.Visible = true;
-            lblInformacao.Text = Message;
-        }
+        protected void Page_Load(object sender, EventArgs e) { }
 
         protected void btnConsultar_Click(object sender, EventArgs e)
         {
@@ -43,8 +24,7 @@ namespace SisContatos
                 contato.SobreNome = txtSobreNome.Text;
                 contato.Email = txtEmail.Text;
                 contato.Telefone = txtTelefone.Text;
-                gdvContatos.DataSource = ContatoService.Listar(contato);
-                var usuarios = UsuarioService.Listar(new Usuario());
+                gdvContatos.DataSource = contatoService.Listar(contato);
                 gdvContatos.DataBind();
             }
             catch (Exception ex)

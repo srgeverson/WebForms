@@ -50,19 +50,24 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/pages/FormCadastroEmSQL">Cadastro em SQL</a></li>
-                        <li><a runat="server" href="~/pages/FormCadastroEmMemoria">Cadastro em Memória</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Operçãoes em SQL<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="nav-link" runat="server" href="~/pages/FormCadastroEmSQL">Cadastrar</a></li>
+                                <li><a class="nav-link" runat="server" href="~/pages/FormListarEmSQL">Listar</a></li>
+                                <li><a class="nav-link" runat="server" href="~/pages/FormAlterarEmSQL">Alterar</a></li>
+                                <li><a class="nav-link" runat="server" href="~/pages/FormExcluirEmSQL">Excluir</a></li>
+                            </ul>
+                        </li>
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Operçãoes em Memória<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="nav-link" runat="server" href="~/pages/FormCadastroEmMemoria">Cadastrar</a></li>
+                              <%--    <li><a class="nav-link" runat="server" href="~/pages/FormListarEmSQL.aspx">Listar</a></li>
+                                <li><a class="nav-link" runat="server" href="~/pages/FormAlterarEmSQL.aspx">Alterar</a></li>
+                                <li><a class="nav-link" runat="server" href="~/pages/FormExcluirEmSQL.aspx">Excluir</a></li>--%>
                             </ul>
                         </li>
                     </ul>
