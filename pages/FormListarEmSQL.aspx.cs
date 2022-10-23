@@ -2,7 +2,6 @@
 using System.Web.UI;
 using AppClassLibraryDomain.model;
 using AppClassLibraryDomain.service;
-using AppClassLibraryDomain.service.implementations;
 using Spring.Context;
 using Spring.Context.Support;
 
@@ -12,17 +11,21 @@ namespace SisContatos
     {
         private static IApplicationContext CONTEXT = ContextRegistry.GetContext();
         private IContatoService contatoService;
+        private IUsuarioService usuarioService;
 
         public IContatoService ContatoService { set => contatoService = value; }
+        public IUsuarioService UsuarioService { set => usuarioService = value; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             //contatoService = new ContatoDAO();
-            if (!IsPostBack)
-            {
-            }
+            //if (!IsPostBack)
+            //{
+            //}
             if (contatoService == null)
-                contatoService = (ContatoService)CONTEXT.GetObject("ContatoService");
+                contatoService = (IContatoService)CONTEXT.GetObject("ContatoService");
+            if (usuarioService == null)
+                usuarioService = (IUsuarioService)CONTEXT.GetObject("UsuarioService");
         }
 
         protected void btnConsultar_Click(object sender, EventArgs e)
@@ -37,7 +40,8 @@ namespace SisContatos
                 contato.SobreNome = txtSobreNome.Text;
                 contato.Email = txtEmail.Text;
                 contato.Telefone = txtTelefone.Text;
-                gdvContatos.DataSource = contatoService.Listar(contato);
+                //gdvContatos.DataSource = contatoService.Listar(contato);
+                gdvContatos.DataSource = usuarioService.Listar(new Usuario());
                 gdvContatos.DataBind();
             }
             catch (Exception ex)
