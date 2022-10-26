@@ -156,6 +156,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\db.xml" />
     <Content Include="Config\dao.xml" />
     <Content Include="Config\services.xml" />
     <Content Include="Config\pages.xml" />
