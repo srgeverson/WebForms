@@ -15,6 +15,33 @@ namespace SisContatos
     {
 
         /// <summary>
+        /// mnMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu mnMenu;
+
+        /// <summary>
+        /// smpMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapPath smpMenu;
+
+        /// <summary>
+        /// smdsMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource smdsMenu;
+
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

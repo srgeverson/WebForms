@@ -64,8 +64,8 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Operçãoes em Memória<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="nav-link" runat="server" href="~/pages/FormCadastroEmMemoria">Cadastrar</a></li>
-                              <%--    <li><a class="nav-link" runat="server" href="~/pages/FormListarEmSQL.aspx">Listar</a></li>
+                                <li><a class="nav-link" runat="server" href="~/pages/FormCadastroEmMemoria">Cadastrar</a></li>
+                                <%--    <li><a class="nav-link" runat="server" href="~/pages/FormListarEmSQL.aspx">Listar</a></li>
                                 <li><a class="nav-link" runat="server" href="~/pages/FormAlterarEmSQL.aspx">Alterar</a></li>
                                 <li><a class="nav-link" runat="server" href="~/pages/FormExcluirEmSQL.aspx">Excluir</a></li>--%>
                             </ul>
@@ -74,12 +74,35 @@
                 </div>
             </div>
         </div>
+        <div>
+            <asp:Menu
+                ID="mnMenu"
+                runat="server"
+                DynamicHorizontalOffset="2"
+                StaticEnableDefaultPopOutImage="false"
+                DynamicEnableDefaultPopOutImage="false" />
+        </div>
+        <div>
+            <asp:SiteMapPath
+                ID="smpMenu"
+                runat="server"
+                Font-Underline="false"
+                PathSeparator=" > "
+                SiteMapProvider="XmlMapaMenu"
+                class="breadcrumb">
+                <%-- <PathSeparatorStyle Font-Bold="true" ForeColor="White" />
+                <CurrentNodeStyle Font-Bold="true" ForeColor="White" />
+                <NodeStyle Font-Bold="false" ForeColor="#DDEEFF" />
+                <RootNodeStyle Font-Bold="false" ForeColor="#BBCCDD" />--%>
+            </asp:SiteMapPath>
+            <asp:SiteMapDataSource ID="smdsMenu" runat="server" />
+        </div>
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> -SisContatos</p>
+                <p>&copy; <%: DateTime.Now.Year %> - SisContatos</p>
             </footer>
         </div>
     </form>

@@ -183,6 +183,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include=".gitignore" />
+    <Content Include="Config\mapaMenu.sitemap" />
+    <Content Include="Config\menu.sitemap" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>

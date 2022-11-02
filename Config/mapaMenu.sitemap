@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="" title="SisContatos" description="Sistema de Cadastro de Contatos">
+		<siteMapNode url="Default.aspx" title="Início" description="Página inicial" />
+		<siteMapNode url="" title="Operçãoes em SQL" description="CRUD com SQL">
+			<siteMapNode url="/pages/FormCadastroEmSQL" title="Cadastrar" description="Cadastros realizados com SQL Nativo" />
+			<siteMapNode url="/pages/FormListarEmSQL" title="Listar" description="Cadastros realizados com SQL Nativo" />
+			<siteMapNode url="/pages/FormAlterarEmSQL" title="Alterar" description="Cadastros realizados com SQL Nativo" />
+			<siteMapNode url="/pages/FormExcluirEmSQL" title="Excluir" description="Cadastros realizados com SQL Nativo" />
+		</siteMapNode>
+		<siteMapNode url="" title="Operçãoes em Memória" description="CRUD com Memória">
+			<siteMapNode url="/pages/FormCadastroEmMemoria" title="Cadastrar" description="Cadastros realizados em Memória" />
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>
