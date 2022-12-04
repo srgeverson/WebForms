@@ -10,4 +10,7 @@
 		<property name="usuarioDAO" ref="UsuarioSQLDAO" />
 	</object>
 	
+	<object name="SistemaService" type="AppClassLibraryDomain.service.SistemaService, AppClassLibraryDomain" >
+		<property name="SistemaDAO" ref="SistemaSQLDAO" />
+	</object>
 </objects>

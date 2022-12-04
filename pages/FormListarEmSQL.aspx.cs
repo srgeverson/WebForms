@@ -24,7 +24,7 @@ namespace SisContatos
                 contato.SobreNome = txtSobreNome.Text;
                 contato.Email = txtEmail.Text;
                 contato.Telefone = txtTelefone.Text;
-                gdvContatos.DataSource = contatoService.Listar(contato);
+                gdvContatos.DataSource = contatoService.ListarPorObjeto(contato);
                 gdvContatos.DataBind();
             }
             catch (Exception ex)

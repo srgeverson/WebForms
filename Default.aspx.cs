@@ -1,16 +1,18 @@
 ﻿using System;
-using System.Web.UI;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace SisContatos
 {
-    public partial class _Default : Page
+    public partial class _Default : BasePage
     {
-        private String message;
-        public String Message { set => message = value; }
+        private String _message;
+        public String Message { set => _message = value; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblTeste.Text = message;
+            lblTeste.Text = _message;
+            lblSistema.Text = SistemaService.Sistema(FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductName);
         }
     }
 }

@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SisContatos</RootNamespace>
-    <AssemblyName>SisContatos</AssemblyName>
+    <RootNamespace>WebForms</RootNamespace>
+    <AssemblyName>WebForms</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -227,6 +227,9 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="pages\FormAlterarEmSQL.aspx.cs">
       <DependentUpon>FormAlterarEmSQL.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

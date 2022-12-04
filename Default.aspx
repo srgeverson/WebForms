@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>SisContatos</h1>
+        <h1><asp:Label ID="lblSistema" runat="server" /></h1>
         <p class="lead">Sistema de Cadastro de Contatos com ASP.NET</p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Saiba mais &raquo;</a></p>
     </div>

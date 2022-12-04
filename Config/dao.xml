@@ -6,11 +6,15 @@
 		<property name="ConnectionFactoryDAO" ref="ConnectionFactoryDAO" />
 	</object>
 	
-	<object name="UsuarioSQLDAO" type="AppClassLibraryDomain.DAO.SQL.UsuarioDAO, AppClassLibraryDomain">
+	<object name="UsuarioSQLDAO" type="AppClassLibraryDomain.DAO.SQL.UsuarioSQLDAO, AppClassLibraryDomain">
 		<property name="urlConnection" ref="UrlConnection"/>
 	</object>
 
 	<object name="PermissaoSQLDAO" type="AppClassLibraryDomain.DAO.SQL.PermissaoDAO, AppClassLibraryDomain">
+		<property name="urlConnection" ref="UrlConnection"/>
+	</object>
+
+	<object name="SistemaSQLDAO" type="AppClassLibraryDomain.DAO.SQL.SistemaSQLDAO, AppClassLibraryDomain">
 		<property name="urlConnection" ref="UrlConnection"/>
 	</object>
 	
