@@ -38,7 +38,10 @@ $ [Spring.Web](https://www.nuget.org/packages/Spring.Web/3.0.0/ReportAbuse)
 ```bash
 
 ### Baixando o projeto
-$ https://github.com/srgeverson/WebForms.git
+$ git clone https://github.com/srgeverson/WebForms.git
+
+### Criando a aplicação
+$ dot net new 
 
 ### Instalando as dependências
 $ Inicializar Interativo com o Projeto

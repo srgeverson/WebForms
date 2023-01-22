@@ -17,7 +17,6 @@ namespace SisContatos
             {
                 return _sistemaService = _sistemaService == null ? (ISistemaService)CONTEXT.GetObject("SistemaService") : _sistemaService;
             }
-            set { _sistemaService = value; }
         }
 
         protected void Page_Init(object sender, EventArgs e) { }
