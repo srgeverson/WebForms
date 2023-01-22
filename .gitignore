@@ -9,3 +9,9 @@
 
 #Ignorar compilador
 !/bin/roslyn/
+
+/.vs/WebForms/FileContentIndex
+/obj/Release
+/Properties/PublishProfiles
+/WebForms.csproj.user
+/.vs/WebForms/v17/.suo
